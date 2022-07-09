@@ -1,0 +1,109 @@
+@import "../common/color.module";
+@import "../common/variables.module";
+@import "../common/mixin.module";
+
+@include mobile {
+    .search__keyword__wrap {
+        top: 126px !important;
+    }
+}
+
+.search__wrap {
+    display: flex;
+    min-width: 340px;
+    height: 40px;
+    background-color: $pointColor;
+    border-radius: 4px;
+    border: 1px solid $mainColor;
+    box-sizing: border-box;
+    .search__nation {
+        // background-color: $mainColor;
+        background-color: $pointColor;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 4px 0px 0px 4px;
+        border: 1px solid $pointColor;
+        box-sizing: border-box;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .search {
+        padding: 12px 24px;
+        background-color: $backgroundColor;
+        // color: rgb(103, 102, 118);
+        // background: rgb(49, 49, 60);
+        flex: 1 1 0%;
+        box-sizing: border-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        border-radius: 0px 4px 4px 0px;
+        &__box {
+            font-size: 15px;
+            line-height: 1.6;
+            background: transparent;
+            outline: none;
+            border: none;
+        }
+        &__button {
+            cursor: pointer;
+        }
+    }
+    .search__keyword__wrap {
+        position: absolute;
+        width: 338px;
+        max-height: 1000px;
+        z-index: 9999;
+        top: 60px;
+        opacity: 1;
+        display: block;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        overflow: auto;
+        text-align: left;
+
+        .search__keyword {
+            padding: 7px 17px;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+            background: #fff;
+            cursor: pointer;
+            &:hover {
+                background-color: #e7f5fe;
+            }
+            &__img {
+                float: left;
+                width: 32px;
+                height: 32px;
+                margin-right: 14px;
+                border-radius: 50%;
+            }
+            &__content {
+                float: left;
+                margin-top: 2px;
+                .search__keyword__name {
+                    margin-top: 2px;
+                    font-family: sans-serif;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #333;
+                }
+                .search__keyword__info {
+                    margin-top: 2px;
+                    line-height: 14px;
+                    font-size: 12px;
+                    color: #666;
+                }
+            }
+        }
+    }
+}
