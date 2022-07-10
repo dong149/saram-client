@@ -1,0 +1,8 @@
+@import "../common/mixin.module";
+@import "../common/color.module";
+
+.content {
+    width: 100%;
+    background-color: $contentBackgroundColor;
+    padding: 20px 10px 20px 10px;
+}

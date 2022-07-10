@@ -1,12 +1,14 @@
-import CommonHeader from "../components/commonHeader";
-import Test from "../components/test";
-import styles from "../styles/About.module.scss";
+import CommonContent from "../../components/commonContent";
+import CommonHeader from "../../components/commonHeader";
+import styles from "../../styles/Profile.module.scss";
+import { useRouter } from "next/router";
 
-export default (props) => {
+export default () => {
+  const router = useRouter();
+  const { id } = router.query;
   return (
     <div>
       <CommonHeader />
-      <Test />
       <div className={styles.container}>
         <div className={styles.profile__wrap}>
           <img className={styles.profile__img} src="/donghun.png" />
@@ -19,6 +21,7 @@ export default (props) => {
         <div className={styles.description}>
           서비스 개발을 좋아하는 평범한 개발자입니다.
         </div>
+        <CommonContent marginTop="20px" />
       </div>
     </div>
   );
