@@ -1,9 +1,35 @@
+@import "./common/font.module";
+@import "./common/color.module";
+@import "./common/mixin.module";
+
+.logo__wrap {
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+}
+.logo {
+  font-family: $logoFont;
+  font-size: 200px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title__wrap {
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+}
+.title {
+  font-size: 40px;
+  font-weight: 300;
+}
+
 .container {
   padding: 0 2rem;
 }
 
 .main {
-  min-height: 100vh;
+  // min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -28,27 +54,27 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
+// .title a {
+//   color: #0070f3;
+//   text-decoration: none;
+// }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
+// .title a:hover,
+// .title a:focus,
+// .title a:active {
+//   text-decoration: underline;
+// }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
+// .title {
+//   margin: 0;
+//   line-height: 1.15;
+//   font-size: 4rem;
+// }
 
-.title,
-.description {
-  text-align: center;
-}
+// .title,
+// .description {
+//   text-align: center;
+// }
 
 .description {
   margin: 4rem 0;
@@ -61,8 +87,8 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+    monospace;
 }
 
 .grid {
